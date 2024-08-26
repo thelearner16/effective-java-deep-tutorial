@@ -2,17 +2,20 @@ package com.effectivejava.tutorial.effectivejava.item5;
 
 public class YazıAnaliziUtility {
 	
-	private static final Sözlük sözlük = new Sözlük("Türkçe");
 	
-	private YazıAnaliziUtility() {
-		// TODO Auto-generated constructor stub
-	}
+	private static final Sözlük turkce= new Sözlük("Türkçe");
 	
-	public static boolean isValid()
-	{
-		// Doldur
+	private YazıAnaliziUtility() {};
+	
+	
+	public static boolean isValid() {
 		return true;
+		
+		
 	}
 	
+	
+	
+
 	
 }

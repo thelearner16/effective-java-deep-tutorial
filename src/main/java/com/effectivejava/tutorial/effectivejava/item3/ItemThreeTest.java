@@ -18,7 +18,7 @@ public class ItemThreeTest {
 			
 				System.out.println("HashCode of LazyCache: " + LazyCache.getInstance());
 				System.out.println("HashCode of EagerCache: " + EagerCache.getInstance());
-				System.out.println("HashCode of CacheSingleton: " + CacheSingleton.INSTANCE.hashCode());
+				System.out.println("HashCode of CacheSingleton: " + CacheSingleton.instance.hashCode());
 												
 			}
 		}).start();
@@ -31,7 +31,7 @@ public class ItemThreeTest {
 				
 				System.out.println("HashCode of LazyCache: " + LazyCache.getInstance());
 				System.out.println("HashCode of EagerCache: " + EagerCache.getInstance());
-				System.out.println("HashCode of CacheSingleton: " + CacheSingleton.INSTANCE.hashCode());
+				System.out.println("HashCode of CacheSingleton: " + CacheSingleton.instance.hashCode());
 				
 			}
 		}).start();

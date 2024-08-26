@@ -1,5 +1,7 @@
 package com.effectivejava.tutorial.effectivejava.item7;
 
+import ch.qos.logback.core.recovery.ResilientSyslogOutputStream;
+
 public class GarbageCollection {
 
 	public void finalize()
@@ -10,16 +12,31 @@ public class GarbageCollection {
 	
 	public static void main(String[] args) {
 		
-		GarbageCollection ali = new GarbageCollection();
-		GarbageCollection mehmet = new GarbageCollection();
-		GarbageCollection sıla = new GarbageCollection();
+		long start = System.nanoTime();
 		
-		ali = null;
+		GarbageCollection ali1= new GarbageCollection();
+		GarbageCollection veli= new GarbageCollection();
+		GarbageCollection sila= new GarbageCollection();
+
+		long start2 = System.nanoTime();
+		long duration1 = start2-start;
 		
-		sıla = mehmet;
+		ali1 = null;
+		
+		veli=sila;
 		
 		System.gc();
 		
+		
+		long end = System.nanoTime();
+		
+		long duration2 = end- start2;
+		
+
+		System.out.println("after 3 GarbageCollection initialized: " + duration1);
+		System.out.println("after System.gc: " + duration2);
+		
+	
 	}
 
 }

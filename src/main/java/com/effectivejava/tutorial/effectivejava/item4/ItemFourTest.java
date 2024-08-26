@@ -10,6 +10,7 @@ public class ItemFourTest {
 		
 		Dene d = new Dene();
 		Enum.topla();
+		EnumBen.topla();
 
 	}
 	

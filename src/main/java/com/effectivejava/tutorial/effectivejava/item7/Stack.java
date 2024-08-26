@@ -14,36 +14,49 @@ public class Stack {
 		System.out.println("Çöpler Toplandı");
 	}
 	
+	
 	public Stack() {
-		// TODO Auto-generated constructor stub
-		elements = new Object[DEFAULT_INITIAL_CAPACITY];
+		
+		elements= new Object[DEFAULT_INITIAL_CAPACITY];
 	}
-	
-	public void push(Object e)
-	{
+
+
+
+	public void push(Object e) {
 		ensureCapacity();
-		elements[size++] = e;
+		elements[size++]=e;
+		
 	}
-	
-	public Object pop()
-	{
-		if(size == 0)
+
+
+	public Object pop() {
+		
+		if (size==0) {
 			throw new EmptyStackException();
-		return elements[--size];
+			
+		}
+		
+		return elements[size--];
+		
 	}
-	
-	public Object popWell()
-	{
-		if(size == 0)
+
+
+	public Object popWell() {
+		
+		if (size==0) 
 			throw new EmptyStackException();
 		
-		Object result = elements[--size];
-		elements[size] = null;
+		Object result = elements[size--];
+		elements[size]=null;
 		
 		return result;
 		
-	}
 		
+	}
+
+	
+	
+//		
 	/**
 	     * Ensure space for at least one more element, roughly
 	     * doubling the capacity each time the array needs to grow.

@@ -3,6 +3,8 @@ package com.effectivejava.tutorial.effectivejava.item6;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.web.client.HttpClientErrorException.Forbidden;
+
 public class ItemSixTest {
 	
 	private static long topla()
@@ -14,6 +16,10 @@ public class ItemSixTest {
 		}
 		return sum;
 	}
+	
+	 
+	
+	
 	
 	public static void main(String[] args) {
 		
@@ -44,6 +50,7 @@ public class ItemSixTest {
 		}
 			
 		
+
 
 	}
 	

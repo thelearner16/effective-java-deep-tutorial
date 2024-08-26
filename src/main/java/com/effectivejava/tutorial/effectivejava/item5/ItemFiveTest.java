@@ -7,32 +7,67 @@ public class ItemFiveTest {
 
 	public static void main(String[] args) {
 			
-//		Supplier<String> supplier = ()-> "Furkan";
-//		
-//		System.out.println(supplier.get());
-//		
-//		Supplier<Sözlük> türkçe = ()-> new Sözlük("Türkçe");
-//		System.out.println(türkçe.get().toString());
-//		
-//		YazıAnaliziDependencyInjection as = new YazıAnaliziDependencyInjection(türkçe);
-//		System.out.println(as.isValid());
-//		
+
+
+		YazıAnaliziSingleton.INSTANCE.isValid();
+		
+		
+		YazıAnaliziDependencyInjection turkce= new YazıAnaliziDependencyInjection(new Sözlük("Türkçe") );
+		System.out.println(turkce.isValid());
+		
+		YazıAnaliziDependencyInjection english= new YazıAnaliziDependencyInjection(new Sözlük("English"));
+		english.isValid();
+		
 
 		
-		Supplier<Double> randomValue = () -> Math.random(); 
+//		Lambda Function
 		
-		double random = Math.random();
+		Supplier<String> st = () -> "My first Supplier trial";
+		
+		System.out.println(st.get());
+		
+		
+		
+		Supplier<String> supplier= () -> "Furkan";
+		
+		System.out.println(supplier.get());
+		
+		Supplier<Sözlük> turkce2= ()-> new Sözlük("Türkçe");
+		
+		System.out.println(turkce2.get().toString());
+		
+
+		
+		Supplier<String> dahaKısa= ()-> YazıAnaliziDependencyInjection.upuzunBayağıUzunBirMetodYazıyorumBirSüredir();
+		
+		System.out.println(dahaKısa.get().toUpperCase());
+		
+		
+		
+		
+
+		double random= 100* Math.random();
+		System.out.println(random);
+		System.out.println(random);
+		System.out.println(random);
+
+		
+		
+		Supplier<Double> randomValue= () -> Math.random()*100;
+		
+		System.out.println(randomValue.get());
+		System.out.println(randomValue.get());
+
+		
+		
+		
 		System.out.println("Bir " + random);
-		System.out.println("iki " + Math.random());
+		System.out.println("iki " + 100* Math.random());
 		System.out.println("üç " +randomValue.get());
 		System.out.println("dört " +randomValue.get());
 		
 		randomValue.get();
 		Math.random();
-		
-		Supplier<String> dahaKısa = () -> YazıAnaliziDependencyInjection.upuzunBayağıUzunBirMetodYazıyorumŞuAnda();
-		
-		dahaKısa.get();
 		
 		
 		
@@ -43,8 +78,8 @@ public class ItemFiveTest {
 		System.out.println(s2); //2016-10-25
 		
 		
-		
-		
+		Supplier<LocalDate> d1= LocalDate::now;
+		System.out.println(d1.get());
 	}
 	
 }

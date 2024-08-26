@@ -9,7 +9,7 @@ public class ItemTwoTest {
 		StarbucksBuilder sb = new StarbucksBuilder.Builder("tall").yumuşakİçenler("ben yumuşak istiyorum").build();
 		
 		
-		
+		StarbucksBuilder sb2=new StarbucksBuilder.Builder("küçük").laktozsuzTayfa("laktozsuz süt").yumuşakİçenler("orta koyu").build();
 		
 	}
 
